@@ -1,0 +1,161 @@
+*{
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+    font-family: 'Inter';
+}
+
+#header{
+    height: 76px;
+    background-color: rgba(51, 182, 103, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#header_title{
+    margin: 0 auto;
+    font-size: 22px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 1);
+}
+
+main{
+    display: flex;
+    margin-top: 4%;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sub_title{
+    font-size: clamp(16px, 1.5vw + 1rem, 26px);
+    font-weight: 400;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+div#card_rodadas:before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    left: 20%;
+    height: 24px;
+    background-image: url(/assets/icons/team_shields.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+}
+
+#card_rodadas{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(221, 221, 221, 1);
+    border-radius: 10px;
+    width: 30%;
+    padding: 20px;
+    margin-top: 5%;
+    gap: 30px;
+    box-sizing: border-box;
+    margin-bottom: 100px;
+}
+
+#card_header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.card_head__title{
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 400;   
+}
+
+.card_head__title> p{
+    margin: 0 auto;
+    font-size: 12px;
+    font-weight: 700;   
+}
+
+.button:hover{
+    scale: 1.1;
+    cursor: pointer;
+}
+
+#div_card_game {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card_game{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 15px; 
+    margin-top: -10px;
+}
+
+.card_game:not(:last-child) {
+    border-bottom: 1px solid #00000021;
+}
+
+.placar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.divider{
+    width: 90%;
+    margin: 0 auto;
+    height: 1px;
+    background-color:rgba(221, 221, 221, 1) ;
+}
+
+.team1, .team2 {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.team1_logo{
+    margin-right: 10px;
+}
+
+.team2_logo{
+    margin-left: 10px;
+}
+.credits{
+    font-size: 12px;
+    font-family: 'math';
+}
+
+@media (max-width: 768px) {
+    #sub_title {
+        margin-top: 5vh;
+        margin-bottom: 1vh;
+    }
+    div#card_rodadas:before {
+        left: -1%;
+    }
+    #card_rodadas{
+        width: 85%;
+    }
+}
