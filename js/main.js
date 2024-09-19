@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', async function () {
             const rodada = data[count].round;
             const games = data[count].games;
             const card_rodadas = document.getElementById("card_rodadas");
-            const card_head__title = document.getElementById("card_head__title");
+            const card_header__rodada = document.getElementById("card_header__rodada");
 
             // Limpa o conteúdo atual
-            card_head__title.innerHTML = '';
+            card_header__rodada.innerHTML = '';
 
             // Cria e adiciona um novo div_card_game
             let div_card_game = document.getElementById("div_card_game");
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             // Atualiza o título do cabeçalho
             const round_number = document.createElement("p");
             round_number.innerText = `Rodada ${rodada}`;
-            card_head__title.appendChild(round_number);
+            card_header__rodada.appendChild(round_number);
             
             games.forEach(jogo => {
                 const card_game = document.createElement("div");
@@ -101,20 +101,23 @@ document.addEventListener('DOMContentLoaded', async function () {
     }
 
     // logica dos botões avançar e retornar
-    document.getElementById('button_right').addEventListener('click', () => {
+    const button_right =  document.getElementById('button_right');
+    button_right.addEventListener('click', () => {
         if (count < data.length - 1) {
             count++;
         } else {
-            count = 0;
+            button_right.setAttribute("disabled");
+
         }  
         renderRodada();
     });
-
-    document.getElementById('button_left').addEventListener('click', () => {
+    
+    const button_left = document.getElementById('button_left');
+    button_left.addEventListener('click', () => {
         if (count > 0) {
             count--;
         } else {
-            count = data.length - 1;
+            button_left.setAttribute("disabled");
         }
         renderRodada();
     });

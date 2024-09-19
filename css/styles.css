@@ -90,6 +90,11 @@ div#card_rodadas:before {
     scale: 1.1;
     cursor: pointer;
 }
+#limit{
+    color:red;
+    font-weight: 400;
+    font-size: 10px;
+}
 
 #div_card_game {
     display: flex;
@@ -146,7 +151,10 @@ div#card_rodadas:before {
     font-size: 12px;
     font-family: 'math';
 }
-
+a{
+    text-decoration: none;
+    color: black;
+}
 @media (max-width: 768px) {
     #sub_title {
         margin-top: 5vh;
